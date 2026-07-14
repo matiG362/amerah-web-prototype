@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Inquiries — Amerah Palace</title>
+<meta name="description" content="Begin planning your stay at Villa Solaia. Our reservations team responds personally to every inquiry within four hours.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">Amerah <em>Palace</em></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms &amp; Suites</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="dining.html">Dining</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Enquire Now</a>
+    <button class="nav-toggle" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <button class="mobile-nav-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="rooms.html">Rooms &amp; Suites</a>
+  <a href="amenities.html">Amenities</a>
+  <a href="dining.html">Dining</a>
+  <a href="location.html">Location</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-contact">+39 0183 555 0142 &nbsp;·&nbsp; reservations@amerahpalace.com</div>
+</div>
+
+<!-- ============ UNDERSTATED HERO ============ -->
+<section class="page-hero" style="min-height:46vh;">
+  <div class="hero-bg" style="background-image:url('https://picsum.photos/seed/solaia-contact-hero/1800/900');"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="hero-kicker">Contact &amp; Inquiries</div>
+      <h1 class="display-1" style="max-width:14ch;">We'd love to<br>welcome you.</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECT CONTACT + FORM ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid-2" style="align-items:flex-start; gap:80px;">
+
+      <!-- LEFT: direct contact -->
+      <div class="reveal">
+        <div class="eyebrow">Reach Us Directly</div>
+        <h2 class="display-3">Prefer to speak<br>with someone now?</h2>
+        <p class="body-text mt-24">Our reservations team is available daily to help you plan. If you'd rather write, we personally respond to every inquiry within four hours.</p>
+
+        <div class="mt-48">
+          <div style="margin-bottom:26px;">
+            <div class="eyebrow">Phone</div>
+            <a href="tel:+390183555142" class="display-4" style="display:block;">+39 0183 555 0142</a>
+            <p class="form-note">Daily, 8am – 9pm CET</p>
+          </div>
+          <div style="margin-bottom:26px;">
+            <div class="eyebrow">Email</div>
+            <a href="mailto:reservations@villasolaia.com" class="display-4" style="display:block;">reservations@villasolaia.com</a>
+            <p class="form-note">We reply personally within 4 hours</p>
+          </div>
+          <div>
+            <div class="eyebrow">WhatsApp</div>
+            <a href="https://wa.me/390183555142" class="display-4" style="display:block;">Message Our Concierge</a>
+            <p class="form-note">For quick questions or last-minute requests</p>
+          </div>
+        </div>
+
+        <hr class="hairline mt-48" style="margin-bottom:32px;">
+
+        <div class="eyebrow">Address</div>
+        <p class="body-text">Amerah Palace<br>Via delle Ginestre 12<br>18012 Jigjiga, Ethiopia</p>
+      </div>
+
+      <!-- RIGHT: inquiry form -->
+      <div class="reveal">
+        <div class="eyebrow">Send an Inquiry</div>
+        <h2 class="display-3">Tell us about<br>your stay.</h2>
+
+        <form id="inquiry-form" class="mt-32">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-field">
+              <label for="guests">Number of Guests</label>
+              <select id="guests" name="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3–4 Guests</option>
+                <option>5+ Guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="dates">Preferred Dates (approximate)</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. Early September, 5 nights">
+            </div>
+            <div class="form-field">
+              <label for="room-interest">Room of Interest</label>
+              <select id="room-interest" name="room-interest">
+                <option value="undecided">Not sure yet</option>
+                <option value="garden">Garden Suite</option>
+                <option value="ocean">Ocean Suite</option>
+                <option value="presidential">Presidential Villa</option>
+                <option value="terrace">Terrace Room</option>
+                <option value="family">Grove Family Suite</option>
+                <option value="spa">Spa Enquiry</option>
+                <option value="il-faro">Il Faro (Dining)</option>
+                <option value="caffe-ginestra">Caffè Ginestra (Dining)</option>
+                <option value="sunset-bar">Sunset Bar (Dining)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about the stay you're picturing..."></textarea>
+          </div>
+          <p class="form-note mt-8">A member of our reservations team will respond personally within 4 hours.</p>
+          <button type="submit" class="btn btn-primary mt-24">Send Your Inquiry</button>
+        </form>
+
+        <div class="form-success">
+          <strong>Thank you — your inquiry has been received.</strong>
+          <p style="margin:10px 0 0; font-weight:300;">A member of our reservations team will reply personally within 4 hours. If your dates are urgent, please call us directly at +39 0183 555 0142.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section sand">
+  <div class="wrap" style="max-width:780px;">
+    <div class="eyebrow">Before You Write</div>
+    <h2 class="display-3 mt-8">A few common questions.</h2>
+    <div class="mt-48">
+      <div class="accordion-item">
+        <button class="accordion-q">Is a deposit required to secure a stay?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="accordion-a"><p>Yes, a deposit secures your dates once your stay is confirmed. Our reservations team will walk you through the details after your initial inquiry — there's no obligation before that.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-q">Can you arrange airport transfer?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="accordion-a"><p>Always. Private transfer from Genoa Airport, Sant'Elmo Station, or Portovino Marina is arranged as standard for every confirmed stay — simply share your travel details with us.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-q">What is your cancellation policy?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="accordion-a"><p>Cancellation terms vary slightly by season and room category. Full details are shared and agreed upon at the time of booking confirmation, so you always know exactly where you stand.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-q">Do you welcome children?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="accordion-a"><p>Warmly. The Grove Family Suite and Presidential Villa are best suited to families, and our concierge can arrange childcare, early dinner settings, and grove exploration walks.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-q">How far in advance should I inquire?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="accordion-a"><p>Our suites are limited by design, and peak-season dates (June through September) are best secured several months ahead. That said, we always recommend reaching out — last-minute availability does occur.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING REASSURANCE ============ -->
+<section class="section-sm">
+  <div class="wrap center" style="max-width:640px;">
+    <div class="img-card reveal" style="width:96px; height:96px; border-radius:50%; overflow:hidden; margin:0 auto 24px;">
+      <img src="https://picsum.photos/seed/gm-portrait/200/200" alt="Portrait of the Villa Solaia reservations team">
+    </div>
+    <p class="pull-quote center reveal" style="margin:0 auto;">"We read every message personally, and we look forward to planning your stay with the same care we'd give a friend."</p>
+    <div class="pull-quote-attr">The Amerah Palace Reservations Team</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Amerah <em>Palace</em></div>
+        <p style="font-size:14px; max-width:32ch; font-weight:300;">Via delle Ginestre 12, 18012 Liguria, Italy — a cliffside sanctuary above the sea.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="location.html">Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+390183555142">+39 0183 555 0142</a></li>
+          <li><a href="mailto:reservations@villasolaia.com">reservations@amerahpalace.com</a></li>
+          <li><a href="contact.html">Send an Inquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Amerah Palace. All rights reserved.</span>
+      <div class="footer-badges">
+        <span>Relais &amp; Châteaux</span>
+        <span>Carbon Conscious Property</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
