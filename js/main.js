@@ -1,5 +1,4 @@
-// ============ VILLA SOLAIA — shared interactions ============
-
+// ============ AMERAH PALACE — shared interactions ============
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- solid header on scroll ---- */
