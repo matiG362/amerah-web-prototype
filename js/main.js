@@ -73,18 +73,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- inquiry form (no backend — demo submit handling) ---- */
-  const form = document.querySelector('#inquiry-form');
+/* ---- live inquiry form submission via FormSubmit ---- */
+  var form = document.querySelector('#inquiry-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      const success = document.querySelector('.form-success');
-      form.style.display = 'none';
-      if (success) success.classList.add('show');
-      window.scrollTo({ top: form.offsetTop - 140, behavior: 'smooth' });
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending Inquiry...';
+
+      var formData = new FormData(form);
+      
+      // Formatting options for luxury delivery
+      formData.append('_subject', 'New Reservation Inquiry — Amerah Palace Hotel');
+      formData.append('_template', 'table');
+      formData.append('_captcha', 'false');
+
+      fetch('https://formsubmit.co/ajax/55756a6c88219acd657df52df18b26c7', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var success = document.querySelector('.form-success');
+        form.style.display = 'none';
+        if (success) success.classList.add('show');
+        window.scrollTo({ top: form.offsetTop - 140, behavior: 'smooth' });
+      })
+      .catch(function (error) {
+        alert('Please reach us directly at reservations@amerahhotels.com or call +251 94 883 1748');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
     });
   }
-
   /* ---- pre-fill room interest from query param (?room=) ---- */
   const params = new URLSearchParams(window.location.search);
   const roomParam = params.get('room');
