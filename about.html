@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Amerah Palace Hotel</title>
+  <meta name="description"
+    content="Discover the vision, mission, and hospitality philosophy of Amerah Palace Hotel in Jigjiga, Ethiopia. Timeless architecture and generous Somali care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/amerah_hotel_logo.jpeg">
+  <link rel="apple-touch-icon" href="images/amerah_hotel_logo.jpeg">
+
+  <style>
+    /* 4-Pillars Vision & Mission Layout */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .pillar-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pillar-badge {
+      background: var(--teal);
+      color: var(--ivory);
+      font-family: var(--f-display);
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 200px;
+      letter-spacing: 0.02em;
+    }
+
+    .pillar-connector {
+      width: 1px;
+      height: 24px;
+      background: var(--brass);
+      position: relative;
+    }
+
+    .pillar-connector::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -3px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--terracotta);
+    }
+
+    .pillar-body {
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 32px 20px;
+      width: 100%;
+      flex-grow: 1;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar-body h3 {
+      font-size: 21px;
+      margin-bottom: 14px;
+      color: var(--teal-deep);
+    }
+
+    .pillar-body p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    @media (max-width: 992px) {
+      .pillar-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ MASTER UNIFIED HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">Amerah <em>Palace</em></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="about" class="active">About</a>
+        <a href="rooms">Rooms</a>
+        <a href="amenities">Amenities</a>
+        <a href="dining">Dining</a>
+        <a href="lounges">Lounges</a>
+        <a href="events">Events</a>
+        <a href="shuttle">Shuttle</a>
+        <a href="gallery">Gallery</a>
+        <a href="location">Location</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <a href="contact" class="nav-cta">Enquire Now</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV DRAWER ============ -->
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <line x1="5" y1="5" x2="19" y2="19" />
+        <line x1="19" y1="5" x2="5" y2="19" />
+      </svg>
+    </button>
+    <a href="/">Home</a>
+    <a href="about">About</a>
+    <a href="rooms">Rooms</a>
+    <a href="amenities">Amenities</a>
+    <a href="dining">Dining</a>
+    <a href="lounges">Lounges</a>
+    <a href="events">Events</a>
+    <a href="shuttle">Shuttle</a>
+    <a href="gallery">Gallery</a>
+    <a href="location">Location</a>
+    <a href="contact">Contact</a>
+    <a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer"
+      style="color:var(--terracotta);">Reservation (Booking.com)</a>
+    <div class="mobile-nav-contact">+251 94 883 1748 &nbsp;·&nbsp; reservations@amerahhotels.com</div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="hero-bg" style="background-image:url('images/hotel-building-exterior.jpg');"></div>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <div class="hero-kicker">Our Story</div>
+        <h1 class="display-1">A sanctuary built<br>for Jigjiga.</h1>
+        <p class="hero-sub">Where classical architectural proportions meet the generous spirit and quiet dignity of the
+          Somali Region.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sunline-wrap">
+    <svg class="sunline" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <path d="M0,50 C300,10 900,10 1200,50" fill="none" stroke-width="1" />
+      <circle cx="600" cy="34" r="5" />
+    </svg>
+  </div>
+
+  <!-- ============ EDITORIAL MANIFESTO ============ -->
+  <section class="section-sm">
+    <div class="wrap" style="max-width:780px;">
+      <div class="eyebrow">The Vision</div>
+      <h2 class="display-3 mt-8">Hospitality rooted in place.</h2>
+      <p class="body-text mt-24">Amerah Palace was established with a singular focus: to offer Jigjiga an accommodation
+        where international standards of comfort exist in harmony with authentic regional character.</p>
+      <p class="body-text mt-16">Standing seven floors above the city, the hotel was designed to create an oasis of
+        stillness. Outside, Jigjiga moves with vibrant trade, regional commerce, and highland energy; inside our gates,
+        the atmosphere slows to a gentle cadence defined by cool stone, shaded courtyards, and attentive human care.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4 PILLARS (VISION, MISSION, OBJECTIVE, VALUES) ============ -->
+  <section class="section sand">
+    <div class="wrap">
+      <div class="eyebrow center" style="justify-content:center;">Our Foundation</div>
+      <h2 class="display-3 center mt-8">Our Vision &amp; Purpose</h2>
+      <p class="lede center mt-16" style="margin:0 auto; max-width:62ch;">To become the leading hospitality destination
+        in Jigjiga, where elegance meets peace of mind and every guest feels genuinely welcomed.</p>
+
+      <div class="pillar-grid">
+
+        <!-- 1. Vision -->
+        <div class="pillar-card reveal">
+          <div class="pillar-badge">Vision</div>
+          <div class="pillar-connector"></div>
+          <div class="pillar-body">
+            <h3>Leading Hospitality</h3>
+            <p>To be the premier hospitality destination in the Somali Region of Ethiopia, where classical elegance
+              meets modern convenience, setting the benchmark for excellence.</p>
+          </div>
+        </div>
+
+        <!-- 2. Mission -->
+        <div class="pillar-card reveal">
+          <div class="pillar-badge">Mission</div>
+          <div class="pillar-connector"></div>
+          <div class="pillar-body">
+            <h3>A Welcoming Oasis</h3>
+            <p>To provide exceptional hospitality experiences combining authentic Ethiopian and Somali warmth with
+              world-class accommodation, cuisine, and discrete service.</p>
+          </div>
+        </div>
+
+        <!-- 3. Objective -->
+        <div class="pillar-card reveal">
+          <div class="pillar-badge">Objective</div>
+          <div class="pillar-connector"></div>
+          <div class="pillar-body">
+            <h3>Memorable Stays</h3>
+            <p>To consistently exceed guest expectations by maintaining rigorous standards of cleanliness, culinary
+              distinction at Al-Diwan, and seamless airport coordination.</p>
+          </div>
+        </div>
+
+        <!-- 4. Values / Team -->
+        <div class="pillar-card reveal">
+          <div class="pillar-badge">Values</div>
+          <div class="pillar-connector"></div>
+          <div class="pillar-body">
+            <h3>A Dedicated Team</h3>
+            <p>Built on the foundation of integrity, personal care, and respect. Whether traveling for official
+              diplomacy, business, or family homecoming, our staff is devoted to your peace.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Direct Assistance Line -->
+      <div class="center mt-48">
+        <p class="display-4" style="color:var(--teal-deep); font-weight:600;">Questions? Call or Message Us Today: <a
+            href="tel:+251948831748" style="color:var(--terracotta);">+251 94 883 1748</a></p>
+        <div class="mt-24">
+          <a href="rooms" class="btn btn-primary">View All Rooms</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ HOST WELCOME LETTER ============ -->
+  <section class="section-sm">
+    <div class="wrap" style="max-width:720px; text-align:center;">
+      <div class="eyebrow center" style="justify-content:center;">A Word From Leadership</div>
+      <p class="pull-quote center mt-24">"Whether you are visiting our city for important diplomacy, regional commerce,
+        or personal homecoming, we consider it a privilege to welcome you under our roof."</p>
+      <div class="pull-quote-attr mt-24">The Executive Management — Amerah Palace Hotel</div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow on-dark" style="justify-content:center;">Experience Amerah</div>
+      <h2 class="display-2">We look forward<br>to your arrival.</h2>
+      <div class="cta-buttons">
+        <a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Reserve on
+          Booking.com</a>
+        <a href="contact" class="btn-outline on-dark btn">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Amerah <em>Palace</em></div>
+          <p style="font-size:14px; max-width:32ch; font-weight:300;">Jigjiga, Somali Region, Ethiopia — a serene
+            sanctuary of refined hospitality.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about">About</a></li>
+            <li><a href="rooms">Rooms</a></li>
+            <li><a href="restaurant">Restaurant</a></li>
+            <li><a href="cafe">Café</a></li>
+            <li><a href="gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+251948831748">+251 94 883 1748</a></li>
+            <li><a href="mailto:reservations@amerahhotels.com">reservations@amerahhotels.com</a></li>
+            <li><a href="contact">Send an Inquiry</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://wa.me/251948831748">WhatsApp Concierge</a></li>
+            <li><a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer">Booking.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Amerah Palace Hotel. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Amerah Palace Hotel</title>
+  <meta name="description"
+    content="Explore the visual gallery of Amerah Palace Hotel in Jigjiga. Authentic photography of our suites, Al-Diwan restaurant, Rooftop Sky Lounge, and wellness spa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/amerah_hotel_logo.jpeg">
+  <link rel="apple-touch-icon" href="images/amerah_hotel_logo.jpeg">
+  <style>
+    /* Gallery filter tabs */
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 10px 22px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--ink-soft);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--ivory);
+      border-color: var(--ink);
+    }
+
+    .gallery-item {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ MASTER UNIFIED HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">Amerah <em>Palace</em></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="about">About</a>
+        <a href="rooms">Rooms</a>
+        <a href="amenities">Amenities</a>
+        <a href="dining">Dining</a>
+        <a href="lounges">Lounges</a>
+        <a href="events">Events</a>
+        <a href="shuttle">Shuttle</a>
+        <a href="gallery" class="active">Gallery</a>
+        <a href="location">Location</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <a href="contact" class="nav-cta">Enquire Now</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="3" y1="7" x2="21" y2="7" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="17" x2="21" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV DRAWER ============ -->
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <line x1="5" y1="5" x2="19" y2="19" />
+        <line x1="19" y1="5" x2="5" y2="19" />
+      </svg>
+    </button>
+    <a href="/">Home</a>
+    <a href="about">About</a>
+    <a href="rooms">Rooms</a>
+    <a href="amenities">Amenities</a>
+    <a href="dining">Dining</a>
+    <a href="lounges">Lounges</a>
+    <a href="events">Events</a>
+    <a href="shuttle">Shuttle</a>
+    <a href="gallery">Gallery</a>
+    <a href="location">Location</a>
+    <a href="contact">Contact</a>
+    <a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer"
+      style="color:var(--terracotta);">Reservation (Booking.com)</a>
+    <div class="mobile-nav-contact">+251 94 883 1748 &nbsp;·&nbsp; reservations@amerahhotels.com</div>
+  </div>
+  <section class="page-hero">
+    <div class="hero-bg" style="background-image:url('images/dining-rooftop-lounge.jpeg');"></div>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <div class="hero-kicker">Visual Archive</div>
+        <h1 class="display-1">The Hotel in<br>Photographs.</h1>
+        <p class="hero-sub">An authentic visual journey through the suites, architecture, dining halls, and quiet
+          moments of Amerah Palace in Jigjiga.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sunline-wrap">
+    <svg class="sunline" viewBox="0 0 1200 64" preserveAspectRatio="none">
+      <path d="M0,50 C300,10 900,10 1200,50" fill="none" stroke-width="1" />
+      <circle cx="600" cy="34" r="5" />
+    </svg>
+  </div>
+
+  <!-- ============ MASTER GALLERY ============ -->
+  <section class="section">
+    <div class="wrap">
+
+      <!-- Filter Navigation -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Photography</button>
+        <button class="filter-btn" data-filter="architecture">Architecture &amp; Arrival</button>
+        <button class="filter-btn" data-filter="suites">Suites &amp; Rooms</button>
+        <button class="filter-btn" data-filter="dining">Dining &amp; Lounges</button>
+        <button class="filter-btn" data-filter="wellness">Wellness &amp; Studio</button>
+      </div>
+
+      <!-- Responsive Grid of All Photos -->
+      <div class="grid-3" id="gallery-grid">
+
+        <!-- 1. Full Building -->
+        <div class="feature-card gallery-item reveal" data-category="architecture">
+          <div class="img-card"><img src="images/hotel-building-exterior.jpg"
+              alt="Amerah Palace Hotel building exterior"></div>
+          <h3>The Hotel Facade</h3>
+          <p>Seven floors of modern architecture in Jigjiga</p>
+        </div>
+
+        <!-- 2. Front Entrance & Chauffeur -->
+        <div class="feature-card gallery-item reveal" data-category="architecture">
+          <div class="img-card"><img src="images/hotel-entrance-front.jpg" alt="Porte-cochere and front entrance"></div>
+          <h3>Porte-Cochère &amp; Entrance</h3>
+          <p>Private arrival with gold crest insignia</p>
+        </div>
+
+        <!-- 3. Night City View -->
+        <div class="feature-card gallery-item reveal" data-category="architecture">
+          <div class="img-card"><img src="images/view-city-night.jpeg" alt="Night skyline over Jigjiga"></div>
+          <h3>Highland Skyline</h3>
+          <p>Evening perspective from upper balconies</p>
+        </div>
+
+        <!-- 4. King Executive Suite -->
+        <div class="feature-card gallery-item reveal" data-category="suites">
+          <div class="img-card"><img src="images/room-king-executive.jpeg" alt="Palace Executive King Suite"></div>
+          <h3>Palace Executive Suite</h3>
+          <p>Warm walnut timber and cove lighting</p>
+        </div>
+
+        <!-- 5. Family Suite -->
+        <div class="feature-card gallery-item reveal" data-category="suites">
+          <div class="img-card"><img src="images/room-family-twin.jpeg" alt="Deluxe Family Suite with two beds"></div>
+          <h3>Deluxe Family Suite</h3>
+          <p>Generous space for traveling together</p>
+        </div>
+
+        <!-- 6. Garden Suite -->
+        <div class="feature-card gallery-item reveal" data-category="suites">
+          <div class="img-card"><img src="images/room-garden-terrace.jpeg" alt="Garden Suite with private terrace">
+          </div>
+          <h3>The Garden Suite</h3>
+          <p>Direct access to courtyard greenery</p>
+        </div>
+
+        <!-- 7. Presidential Salon -->
+        <div class="feature-card gallery-item reveal" data-category="suites">
+          <div class="img-card"><img src="images/room-presidential-classic.jpeg"
+              alt="Presidential Residence grand salon"></div>
+          <h3>Presidential Residence</h3>
+          <p>Classical tufted salon and wrap-around terrace</p>
+        </div>
+
+        <!-- 8. Luxury Bathroom -->
+        <div class="feature-card gallery-item reveal" data-category="suites">
+          <div class="img-card"><img src="images/room-luxury-bathroom.jpeg"
+              alt="Suite en-suite bathroom with soaking tub"></div>
+          <h3>En-Suite Bathroom</h3>
+          <p>Walk-in glass shower and modern soaking tub</p>
+        </div>
+
+        <!-- 9. Main Dining Hall -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-main-hall.jpg" alt="Al-Diwan main dining hall"></div>
+          <h3>Al-Diwan Dining Hall</h3>
+          <p>Gold pedestal tables and sage-green armchairs</p>
+        </div>
+
+        <!-- 10. Arched Niches Hall -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-arched-hall.jpg" alt="Dining room arched wall alcoves"></div>
+          <h3>Arched Dining Niches</h3>
+          <p>Neoclassical paneling and daylight ambiance</p>
+        </div>
+
+        <!-- 11. Window Tables -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-window-tables.jpg" alt="Window-side tables at Amerah Palace">
+          </div>
+          <h3>Sunlit Window Salons</h3>
+          <p>Unhurried daytime reading and conversation</p>
+        </div>
+
+        <!-- 12. Reception Columns -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-lounge-columns.jpg" alt="Classical columns in reception lounge">
+          </div>
+          <h3>Lobby &amp; Reception Salon</h3>
+          <p>Classical columns and quiet seating corners</p>
+        </div>
+
+        <!-- 13. Fine Dining Dish -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-fine-dish.jpeg" alt="Signature fine dining plated dish"></div>
+          <h3>Culinary Signatures</h3>
+          <p>Tableside roasted cuts with seasonal reductions</p>
+        </div>
+
+        <!-- 14. Courtyard Spiced Tea -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-courtyard-tea.jpeg" alt="Courtyard spiced tea under pergola">
+          </div>
+          <h3>Courtyard Café</h3>
+          <p>Traditional spiced tea steeped with cardamom and clove</p>
+        </div>
+
+        <!-- 15. Rooftop Sky Lounge -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-rooftop-lounge.jpeg"
+              alt="Rooftop Sky Lounge at night with fire pits"></div>
+          <h3>The Rooftop Sky Lounge</h3>
+          <p>Evening fire pits and panoramic city lights</p>
+        </div>
+
+        <!-- 16. Private Banquet -->
+        <div class="feature-card gallery-item reveal" data-category="dining">
+          <div class="img-card"><img src="images/dining-private-banquet.jpg" alt="Formal private banquet table setup">
+          </div>
+          <h3>The Banquet Hall</h3>
+          <p>Multi-course feasts for delegations and celebrations</p>
+        </div>
+
+        <!-- 17. Amerah Spa -->
+        <div class="feature-card gallery-item reveal" data-category="wellness">
+          <div class="img-card"><img src="images/amenity-spa-treatment.jpeg" alt="Amerah Spa treatment suite"></div>
+          <h3>Amerah Spa</h3>
+          <p>Thermal baths, massage therapy, and frankincense rituals</p>
+        </div>
+
+        <!-- 18. Fitness Studio -->
+        <div class="feature-card gallery-item reveal" data-category="wellness">
+          <div class="img-card"><img src="images/amenity-fitness-studio.jpeg" alt="High-floor fitness studio"></div>
+          <h3>Skyline Fitness Studio</h3>
+          <p>Floor-to-ceiling glass and modern cardio equipment</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow on-dark" style="justify-content:center;">Experience Amerah Palace</div>
+      <h2 class="display-2">Join us in Jigjiga.</h2>
+      <div class="cta-buttons">
+        <a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Reserve on
+          Booking.com</a>
+        <a href="contact.html" class="btn-outline on-dark btn">Contact Concierge</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Amerah <em>Palace</em></div>
+          <p style="font-size:14px; max-width:32ch; font-weight:300;">Jigjiga, Somali Region, Ethiopia — a serene
+            sanctuary of refined hospitality.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="restaurant.html">Restaurant</a></li>
+            <li><a href="cafe.html">Café</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+251948831748">+251 94 883 1748</a></li>
+            <li><a href="mailto:reservations@amerahhotels.com">reservations@amerahhotels.com</a></li>
+            <li><a href="contact.html">Send an Inquiry</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://wa.me/251948831748">WhatsApp Concierge</a></li>
+            <li><a href="https://www.booking.com/" target="_blank" rel="noopener noreferrer">Booking.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Amerah Palace Hotel. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple category filtering
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.gallery-item').forEach(function (item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
