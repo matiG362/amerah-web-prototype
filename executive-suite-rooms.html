@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Suite Rooms — Amerah Palace</title>
+    <meta name="description"
+        content="The Executive Suites at Amerah Palace in Jigjiga. Featuring expansive dual-room living, courtyard garden terraces, private lounge salon, and king master suite.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="images/amerah_hotel_logo.jpeg">
+    <link rel="apple-touch-icon" href="images/amerah_hotel_logo.jpeg">
+
+    <style>
+        .room-feature-box {
+            padding: clamp(28px, 4vw, 56px);
+            margin-top: 40px;
+        }
+
+        .room-title-center {
+            text-align: center;
+            color: var(--teal);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .room-lead-center {
+            max-width: 820px;
+            margin: 0 auto 48px;
+            text-align: center;
+            font-size: 16.5px;
+            color: var(--teal-deep);
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        .showcase-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .showcase-main-img {
+            position: relative;
+            border: 1px solid var(--line);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--ivory-dim);
+        }
+
+        .showcase-main-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .amenity-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .amenity-checklist li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .amenity-checklist svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            stroke: var(--teal);
+            fill: none;
+            stroke-width: 1.7;
+        }
+
+        .price-action-strip {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .rate-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--teal);
+            color: var(--ivory);
+            font-family: var(--f-display);
+            font-size: 19px;
+            font-weight: 500;
+            padding: 10px 24px;
+            letter-spacing: 0.04em;
+        }
+
+        .photo-grid-12 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .photo-thumb {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--ivory-dim);
+            position: relative;
+        }
+
+        .photo-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .photo-thumb:hover img {
+            transform: scale(1.06);
+        }
+
+        .blueprint-thumb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #FAFAF7;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .blueprint-thumb svg {
+            width: 80%;
+            height: 80%;
+            stroke: var(--ink-soft);
+            stroke-width: 1;
+            opacity: 0.85;
+        }
+
+        .blueprint-label {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 960px) {
+            .showcase-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .photo-grid-12 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 540px) {
+            .photo-grid-12 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+        <div class="wrap">
+            <a href="/" class="logo">Amerah <em>Palace</em></a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="about">About</a>
+                <a href="rooms" class="active">Rooms</a>
+                <a href="amenities">Amenities</a>
+                <a href="dining">Dining</a>
+                <a href="lounges">Lounges</a>
+                <a href="events">Events</a>
+                <a href="shuttle">Shuttle</a>
+                <a href="gallery">Gallery</a>
+                <a href="location">Location</a>
+                <a href="contact">Contact</a>
+            </nav>
+            <a href="contact?room=executive-suite" class="nav-cta">Enquire Now</a>
+            <button class="nav-toggle" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <line x1="3" y1="7" x2="21" y2="7" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="17" x2="21" y2="17" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============ MOBILE NAV DRAWER ============ -->
+    <div class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                <line x1="5" y1="5" x2="19" y2="19" />
+                <line x1="19" y1="5" x2="5" y2="19" />
+            </svg>
+        </button>
+        <a href="/">Home</a>
+        <a href="about">About</a>
+        <a href="rooms">Rooms</a>
+        <a href="amenities">Amenities</a>
+        <a href="dining">Dining</a>
+        <a href="lounges">Lounges</a>
+        <a href="events">Events</a>
+        <a href="shuttle">Shuttle</a>
+        <a href="gallery">Gallery</a>
+        <a href="location">Location</a>
+        <a href="contact">Contact</a>
+        <a href="https://www.booking.com/hotel/et/amerah-palace.html" target="_blank" rel="noopener noreferrer"
+            style="color:var(--terracotta);">Reservation (Booking.com)</a>
+        <div class="mobile-nav-contact">+251 94 883 1748 &nbsp;·&nbsp; reservations@amerahhotels.com</div>
+    </div>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="hero-bg" style="background-image:url('images/standard_view_5.jpg');"></div>
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+            <div class="wrap">
+                <div class="hero-kicker">Accommodations &nbsp;·&nbsp; Executive Suite</div>
+                <h1 class="display-1">Courtyard terraces<br>&amp; expansive salons.</h1>
+                <p class="hero-sub">A generous residential layout pairing a private entertaining salon with a restful
+                    master chamber, framed by manicured courtyard gardens and morning sunlight.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="sunline-wrap">
+        <svg class="sunline" viewBox="0 0 1200 64" preserveAspectRatio="none">
+            <path d="M0,50 C300,10 900,10 1200,50" fill="none" stroke-width="1" />
+            <circle cx="600" cy="34" r="5" />
+        </svg>
+    </div>
+
+    <!-- ============ ROOM SHOWCASE & AMENITY CHECKLIST ============ -->
+    <section class="section-sm">
+        <div class="wrap">
+            <div class="room-feature-box reveal">
+                <div class="room-title-center">EXECUTIVE SUITE</div>
+                <p class="room-lead-center">
+                    The Executive Suite offers 68 sq m of dual-room residential luxury featuring a dedicated receiving
+                    salon, master king bedroom, private terrace access, and a guest powder room. Guests experience an
+                    exclusive retreat with room to dine, meet, and unwind in complete privacy.
+                </p>
+
+                <div class="showcase-layout">
+                    <!-- Featured Main Image -->
+                    <div class="showcase-main-img">
+                        <img src="images/standard_view_5.jpg" alt="Amerah Palace Executive Suite main salon">
+                    </div>
+
+                    <!-- Amenity Checklist + Rate -->
+                    <div>
+                        <ul class="amenity-checklist">
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                                    <line x1="6" y1="1" x2="6" y2="4" />
+                                    <line x1="10" y1="1" x2="10" y2="4" />
+                                    <line x1="14" y1="1" x2="14" y2="4" />
+                                </svg>
+                                Gourmet coffee machine &amp; fine tea selection
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="7" width="20" height="15" rx="2" />
+                                    <polyline points="17 2 12 7 7 2" />
+                                </svg>
+                                Dual Smart 4K TVs (in salon &amp; master bedroom)
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" />
+                                </svg>
+                                Complimentary high-speed fiber Wi-Fi
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="5" />
+                                    <line x1="12" y1="1" x2="12" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="23" />
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                    <line x1="1" y1="12" x2="3" y2="12" />
+                                    <line x1="21" y1="12" x2="23" y2="12" />
+                                </svg>
+                                Multi-zone controlled air-conditioning &amp; heat
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                Laptop-size heavy electronic safe
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                    <line x1="5" y1="10" x2="19" y2="10" />
+                                    <line x1="8" y1="6" x2="8" y2="8" />
+                                    <line x1="8" y1="14" x2="8" y2="16" />
+                                </svg>
+                                Executive minibar &amp; kitchenette pantry
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="6" cy="6" r="3" />
+                                    <path d="M6 9v12M9 13l6-4a3 3 0 0 1 3 5l-4 2" />
+                                </svg>
+                                Ionic hair dryer &amp; lighted vanity station
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 17h18l-3-7H6l-3 7zM12 3v7" />
+                                </svg>
+                                In-suite iron, ironing board &amp; garment care
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 18c0-3 2-6 6-6s6 3 6 6M3 18h12" />
+                                </svg>
+                                Luxury cotton bathrobes &amp; plush slippers
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 4h16v4H4zM4 8l2 12h12l2-12" />
+                                    <circle cx="12" cy="14" r="1" />
+                                </svg>
+                                Walk-in monsoon rain shower &amp; double vanity
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                Dual cordless speaker phones
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                                </svg>
+                                Artisanal botanical bath &amp; skincare products
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="4" width="18" height="12" rx="1" />
+                                    <line x1="3" y1="16" x2="3" y2="20" />
+                                    <line x1="21" y1="16" x2="21" y2="20" />
+                                </svg>
+                                Separate living lounge &amp; dining conference table
+                            </li>
+                        </ul>
+
+                        <div class="price-action-strip">
+                            <div class="rate-badge">$195 / night</div>
+                            <a href="contact?room=executive-suite" class="btn btn-primary">Book This Suite</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ 12-IMAGE PHOTO & FLOOR PLAN GRID ============ -->
+                <div class="photo-grid-12">
+                    <div class="photo-thumb"><img src="images/standard_view_5.jpg" alt="Executive Suite living salon">
+                    </div>
+                    <div class="photo-thumb"><img src="images/standard_view_4.jpg" alt="Master bedroom king bed"></div>
+                    <div class="photo-thumb"><img src="images/room-luxury-bathroom.jpeg"
+                            alt="Double stone vanity bathroom"></div>
+                    <div class="photo-thumb"><img src="images/standard_view_9.jpg" alt="Dining and meeting table area">
+                    </div>
+                    <div class="photo-thumb"><img src="images/standard_view_2.jpg" alt="Suite couch seating detail">
+                    </div>
+                    <div class="photo-thumb"><img src="images/standard_view_3.jpg" alt="Private terrace perspective">
+                    </div>
+                    <div class="photo-thumb"><img src="images/standard_view_8.jpg" alt="Master suite natural daylight">
+                    </div>
+                    <div class="photo-thumb"><img src="images/room-presidential-classic.jpeg"
+                            alt="Salon lounge corridor"></div>
+                    <div class="photo-thumb"><img src="images/room-luxury-bathroom.jpeg"
+                            alt="Rain shower stall and fixtures"></div>
+                    <div class="photo-thumb"><img src="images/view-city-night.jpeg" alt="Terrace night city skyline">
+                    </div>
+                    <div class="photo-thumb"><img src="images/standard_view_4.jpg" alt="Headboard and wood paneling">
+                    </div>
+                    <!-- Architectural Floor Plan Thumbnail -->
+                    <div class="photo-thumb blueprint-thumb">
+                        <svg viewBox="0 0 140 100" fill="none">
+                            <rect x="6" y="6" width="128" height="88" stroke="currentColor" />
+                            <line x1="68" y1="6" x2="68" y2="94" stroke="currentColor" />
+                            <!-- Bedroom Left -->
+                            <rect x="14" y="14" width="46" height="38" stroke="currentColor" />
+                            <rect x="14" y="62" width="24" height="24" stroke="currentColor" />
+                            <!-- Salon Right -->
+                            <rect x="76" y="16" width="48" height="24" stroke="currentColor" />
+                            <circle cx="98" cy="62" r="12" stroke="currentColor" />
+                            <rect x="6" y="70" width="128" height="24" stroke="currentColor" stroke-dasharray="2 2" />
+                        </svg>
+                        <span class="blueprint-label">Suite Layout Blueprint</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CROSS-SELL ROOMS ============ -->
+    <section class="section sand">
+        <div class="wrap">
+            <div class="eyebrow">Explore Further</div>
+            <h2 class="display-3">Other Ways to Stay</h2>
+            <div class="grid-3 mt-48">
+                <div class="feature-card reveal">
+                    <div class="img-card"><img src="images/standard_view_8.jpg" alt="Standard Room at Amerah Palace">
+                    </div>
+                    <h3>Standard Room</h3>
+                    <p>36m² · Queen Bed · Calming Ambiance</p>
+                    <a href="standard-rooms" class="btn-ghost">View Standard Room</a>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="img-card"><img src="images/standard_view_9.jpg" alt="Executive Room at Amerah Palace">
+                    </div>
+                    <h3>Executive Room</h3>
+                    <p>48m² · King Bed · Private Skyline Balcony</p>
+                    <a href="executive-rooms" class="btn-ghost">View Executive Room</a>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="img-card"><img src="images/room-presidential-classic.jpeg"
+                            alt="Presidential Luxury Room"></div>
+                    <h3>Presidential Luxury Room</h3>
+                    <p>120m² · Grand Salon · Butler Attendance</p>
+                    <a href="presidential-luxury-rooms" class="btn-ghost">View Presidential Suite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+        <div class="wrap">
+            <div class="eyebrow on-dark" style="justify-content:center;">Direct Reservations</div>
+            <h2 class="display-2">Indulge in the Executive Suite<br>at Amerah Palace.</h2>
+            <p class="lede center" style="color:rgba(246,241,231,0.8); margin:0 auto;">Inquire directly with our team to
+                arrange personalized check-in, private dining service, and courtyard selection.</p>
+            <div class="cta-buttons">
+                <a href="contact?room=executive-suite" class="btn btn-primary">Book Executive Suite</a>
+                <a href="tel:+251257750142" class="btn btn-outline on-dark">Call Concierge (+251 25 775 0142)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-logo">Amerah <em>Palace</em></div>
+                    <p style="font-size:14px; max-width:32ch; font-weight:300;">Jigjiga, Somali Region, Ethiopia — a
+                        serene sanctuary of refined hospitality.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="rooms">Rooms &amp; Suites</a></li>
+                        <li><a href="amenities">Amenities</a></li>
+                        <li><a href="dining">Dining</a></li>
+                        <li><a href="location">Location</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+251257750142">+251 25 775 0142</a></li>
+                        <li><a href="mailto:reservations@amerahhotels.com">reservations@amerahhotels.com</a></li>
+                        <li><a href="contact">Send an Inquiry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Amerah Palace. All rights reserved.</span>
+                <div class="footer-badges">
+                    <span>Curated Hospitality</span>
+                    <span>Eco-Conscious Property</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ STICKY CONTACT ============ -->
+    <a href="https://www.booking.com/hotel/et/amerah-palace.html" class="sticky-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span class="full">Enquire Now</span>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
