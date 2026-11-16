@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: form.offsetTop - 140, behavior: 'smooth' });
       })
       .catch(function (error) {
-        alert('Please reach us directly at reservations@amerahhotels.com or call +251 94 883 1748');
+        alert('Please reach us directly at reservations@amerahhotels.com or call +251966055576 ');
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
       });
